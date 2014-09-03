@@ -1,0 +1,63 @@
+\documentclass[14pt]{beamer}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\setbeamerfont{author in head/foot}{size=\small}
+\setbeamerfont{title in head/foot}{size=\footnotesize}
+
+\title{Some cool scientific method}
+\date{\today}
+\author{erthalion}
+\institute{Your University \\
+    \vspace{0.7cm}
+    \vspace{0.7cm}
+} 
+\usetheme[numbers, totalnumbers, minimal, nologo]{Statmod}
+\usefonttheme[onlymath]{serif}
+
+\definecolor{statmodblue}{RGB}{100,10,30}
+\definecolor{statmodsand}{RGB}{244,215,103}
+
+\begin{document}
+\maketitle
+
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+	\item First item
+	\item Second item
+\end{itemize}
+\end{frame}
+\note{Some note for author}
+
+\begin{frame}
+\frametitle{Introduction}
+\setbeamercolor{normal text}{fg=gray,bg=}
+\setbeamercolor{alerted text}{fg=black,bg=}
+\usebeamercolor{normal text}
+\begin{itemize}
+    \item \alert<+>{First item}
+    \item \alert<+>{Second item}
+    \item \alert<+>{Thirs item}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Some formulas}
+\begin{gather}
+\label{eq:interpolation}
+u_k = \sum_{ij}h^{2} u_{ij} D_{ij}(x_k) \\
+\label{eq:spreading}
+F_{ij} = \frac{1}{N} \sum_k f_k D_{ij}(x_k)
+\end{gather}
+
+$D_{ij}(x_k)$ is $\delta(x-x_k)$
+\end{frame}
+
+\end{document}
